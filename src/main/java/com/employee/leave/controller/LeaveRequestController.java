@@ -1,7 +1,6 @@
 package com.employee.leave.controller;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.employee.leave.dto.LeaveRequestResponseDTO;
 import com.employee.leave.responsemessage.ResponseMessage;
 import com.employee.leave.service.LeaveRequestService;
@@ -57,5 +55,4 @@ public class LeaveRequestController {
 		ResponseMessage<LeaveRequestResponseDTO> approveLeave = leaveRequestService.rejectLeave(id);
 		return new ResponseEntity<>(approveLeave,HttpStatus.OK);
 	}
-	
 }
